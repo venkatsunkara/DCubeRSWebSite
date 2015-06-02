@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en-US" >
+<head>
+    <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
+    <meta name="description" content="DCube RS LLC website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <title>DCubeRS</title>
+</head>
+<body>
+    <script src="/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/Content/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Style.css" />
+    <link rel="stylesheet" media="screen and (max-width: 700px)" href="StyleSmall.css" />
+    <header>
+        <h1 style="color:white;">DC<small style="color:white">UBE</small>RS</h1>
+    </header>
+    <script>
+        function home() {
+            //document.getElementById("content").innerHTML = '<object width=100% min-height=101% type=text/html" data="HomeInner.html"></object>';
+            document.getElementById("content").src = "HomeInner.html";
+        }
+        function about() {
+            //window.location = "about.html";
+            //document.getElementById("content").innerHTML = '<object width=100% min-height=101% type=text/html" data="About.html"></object>';
+            document.getElementById("content").src = "About.html";
+        }
+        function contact() {
+            //document.getElementById("content").innerHTML = '<object width=100% min-height=101% type=text/html" data="Contact.html"></object>';
+            document.getElementById("content").src = "Contact.html";
+        }
+        function test() {
+            //document.getElementById("content").innerHTML = '<object width=100% min-height=101% type=text/html" data="mortgage.html" ></object>';
+        }
+        function testing(str) {
+            window.alert(str);
+        }
+    </script>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">home</a>
+            </div>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#" onclick="home()">home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">apps & games<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li id="ddcontainer">
+                                <div id="elem1"><a href="#" onclick="testing('bj')"><img src="images/blackjack64.png" alt="Blackjack"><p style="font-size:11px">Blackjack</p></a></div>
+                                <div><a href="#" onclick="testing('ht')"><img src="images/ht64.png" alt="Hangar Troubles"><p style="font-size:11px">Hangar Troubles</p></a></div>
+                                <div><a href="#" onclick="testing('mort')"><img src="images/mortcalc64.png" alt="Mortgage Calculator"><p style="font-size:11px">Mortgage Calculator</p></a></div>
+                                <div><a href="#" onclick="testing('poker')"><img src="images/poker64.png" alt="Texas Hold'em Poker"><p style="font-size:11px">Texas Hold'em Poker</p></a></div>
+                                <div><a href="#" onclick="testing('tic')"><img src="images/tictactoe64.png" alt="Tic-Tac-Toe"><p style="font-size:11px">Tic-Tac-Toe</p></a></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#" onclick="about()">about</a></li>
+                    <li><a href="#" onclick="contact()">contact us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="container1">
+        <div>
+            Lorem ipsum
+        </div>
+        <div class="fill">
+            <iframe id="content" scrolling="no" frameborder="0" src="HomeInner.html"></iframe>
+        </div>
+    </div>
+    <!--<div style="width:100%; position: relative; height:auto; top: 0px; bottom: 0px;">
+        <iframe id="content" scrolling="no" frameborder="0" src="HomeInner.html"></iframe>
+    </div>-->
+</body>
+</html>
